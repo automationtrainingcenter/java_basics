@@ -1,4 +1,7 @@
 package basicconcepts;
+
+import java.util.Scanner;
+
 /*
  * Constructor is a special method whose name is same as the class name.
  * Constructor doesn't have any explicit return type. Every Constructor will return reference(memory location) 
@@ -27,14 +30,31 @@ public class ConstructorsDemo {
 	double balance;
 	
 	public ConstructorsDemo() {
-		name = "prakash";
-		id = 100;
-		balance = 1000.00;
+		this.name = "prakash";
+		this.id = 100;
+		this.balance = 1000.00;
 	}
 	
-	public ConstructorsDemo(String n, int i) {
-		name = n;
-		id = i;
+	public ConstructorsDemo(String name, int id) {
+		this.name = name;
+		this.id = id;
+	}
+	
+	//by changing number of arguments
+	public ConstructorsDemo(String name, int id, double balance) {
+		this(name, id);
+		this.balance = balance;
+	}
+	
+	//by changing the type of arguments
+	public ConstructorsDemo(String name, double balance) {
+		this.name = name;
+		this.balance = balance;
+	}
+	
+	//by changing sequence of arguments
+	public ConstructorsDemo(int id, String name) {
+		this(name,id);
 	}
 	
 	public static void main(String[] args) {
@@ -47,6 +67,11 @@ public class ConstructorsDemo {
 //		o2.id = 102;
 		System.out.println("name = "+o2.name+"\nid = "+o2.id+"\nbalance = "+o2.balance);
 		
+		ConstructorsDemo o3 = new ConstructorsDemo("tejaswi", 1000.00);
+		
+		ConstructorsDemo o4 = new ConstructorsDemo(102, "tejaswi");
+		
+		Scanner s = new Scanner(System.in, "adafda");
 	}
 
 }
