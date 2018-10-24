@@ -4,7 +4,7 @@ public class JavaPrograms {
 	
 	// write a method to find out given character is vowel or not using if else statement
 	
-	// write a method to verify given number is palindrome or not
+	// write a method to verify given number is pallindrome or not
 	
 	// write a method to find factorial of a given number
 	
